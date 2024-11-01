@@ -1,6 +1,6 @@
 import styles from "./page.module.scss";
-import Footer from "@/app/templates/Footer";
-import Main from '@/app/templates/Main';
+import Footer from "@/app/components/Footer";
+import Main from '@/app/components/Main';
 
 export default function Home() {
   return (

@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 # CapPhotoApp
 
+Based on [freeCodeCamp Project](https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-html-by-building-a-cat-photo-app/)
+
 ## Getting Started
 
 First, run the development server:
