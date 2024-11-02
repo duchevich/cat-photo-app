@@ -1,0 +1,29 @@
+.form{
+  width: 50%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.fieldset{
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.label{
+  margin-right: 15px;
+}
+.button{
+  margin-top: 15px;
+  background: #0a0a0a;
+  transition: background-color 0.1s ease;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  &:hover{
+    background: #29292BFF;
+  }
+}
+.error{
+  color: red;
+  margin: 10px 0;
+}

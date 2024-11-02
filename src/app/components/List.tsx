@@ -24,8 +24,10 @@ const List = (props: ListProps) => {
                     className={styles.img}
                     src={props.src}
                     alt={props.alt}
-                    width={500}
-                    height={300}
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    style={{ width: '500px', height: 'auto' }}
                 />
                 <figcaption>{props.caption}</figcaption>
             </figure>

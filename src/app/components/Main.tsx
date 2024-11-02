@@ -18,8 +18,10 @@ export default function main() {
                         className={styles.img}
                         src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
                         alt="A cute orange cat lying on its back."
-                        width={500}
-                        height={300}
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        style={{ width: '500px', height: 'auto' }}
                     />
                 </a>
             </section>
