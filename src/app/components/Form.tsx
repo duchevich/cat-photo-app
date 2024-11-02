@@ -4,6 +4,7 @@ import styles from './form.module.scss'
 import {formSchemaDataType, formSchema} from "@/app/schemas/formSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Error from "@/app/components/Error";
 
 const Form = () => {
     const {
@@ -20,14 +21,13 @@ const Form = () => {
     };
 
     return (
-
         <form
             action="https://freecatphotoapp.com/submit-cat-photo"
             className={styles.form}
             onSubmit={handleSubmit(onSubmit)}
         >
             <fieldset className={styles.fieldset}>
-                <legend>Is your cat an indoor or outdoor cat?</legend>
+                <legend className={styles.legend}>Is your cat an indoor or outdoor cat?</legend>
                 <label>
                     <input
                         id="indoor"
@@ -42,24 +42,24 @@ const Form = () => {
                         value="outdoor"
                         {...register("indoor-outdoor")}
                     /> Outdoor</label>
-                <div className={styles.error}>{errors["indoor-outdoor"]?.message}</div>
+                <Error message={errors["indoor-outdoor"]?.message} />
             </fieldset>
             <fieldset className={styles.fieldset}>
-                <legend>What's your cat's personality?</legend>
+                <legend className={styles.legend}>What's your cat's personality?</legend>
                 <input {...register("personality")} id="loving" type="checkbox" value="loving"/>
                 <label htmlFor="loving" className={styles.label}>Loving</label>
                 <input {...register("personality")} id="lazy" type="checkbox" value="lazy"/>
                 <label htmlFor="lazy" className={styles.label}>Lazy</label>
                 <input {...register("personality")} id="energetic" type="checkbox" value="energetic"/>
                 <label htmlFor="energetic" className={styles.label}>Energetic</label>
-                <div className={styles.error}>{errors.personality?.message}</div>
+                <Error message={errors.personality?.message} />
             </fieldset>
             <input
                 type="text"
                 placeholder="cat photo URL"
                 {...register("url")}
             />
-            <div className={styles.error}>{errors.url?.message}</div>
+            <Error message={errors.url?.message} />
             <button type="submit" className={styles.button}>Submit</button>
         </form>
     )

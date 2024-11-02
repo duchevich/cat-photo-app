@@ -4,13 +4,6 @@
   margin: 0 auto;
   padding: 20px;
 }
-.fieldset{
-  margin-bottom: 20px;
-  padding: 10px;
-}
-.label{
-  margin-right: 15px;
-}
 .button{
   margin-top: 15px;
   background: #0a0a0a;
@@ -23,7 +16,14 @@
     background: #29292BFF;
   }
 }
-.error{
-  color: red;
-  margin: 10px 0;
+.fieldset{
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.legend{
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.label{
+  margin-right: 15px;
 }
